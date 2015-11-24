@@ -94,7 +94,13 @@ public class Concentration {
 	}
 	System.out.println("Flipping tile...");
 	try {
-	    _board[r1][c1].flip();
+	    if (_board[r1][c1].isFaceUp()) {
+		System.out.println("Nope.");
+		return;
+	    }
+	    else {
+		_board[r1][c1].flip();
+	    }
 	}
 	catch (Exception e) {
 	    System.out.println("Not a chance. Beginning of turn.");
@@ -129,7 +135,14 @@ public class Concentration {
 		return;
 	    }
 	    else {
-		_board[r2][c2].flip();
+		if (_board[r2][c2].isFaceUp()) {
+		    System.out.println("Nope.");
+		    _board[r1][c1].flip();
+		    return;
+		}
+		else {
+		    _board[r2][c2].flip();
+		}
 	    }
 	}
 	catch (Exception e) {
