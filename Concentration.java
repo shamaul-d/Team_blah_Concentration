@@ -174,11 +174,14 @@ public class Concentration {
     
     public void play() {
 	int flipped = 0;
+	int turns = 0;
 	while (flipped != (_numRows * 4)) {
 	    turn();
-	    flipped = count(); 
+	    flipped = count();
+	    turns += 1;
 	}
 	System.out.println("We have a winner! Truly amazing. No sarcasm at all.");
+	System.out.println("Total number of moves/attempted cheats: " + turns);
     }
     //DO NOT MODIFY main()
     public static void main(String[] args){
