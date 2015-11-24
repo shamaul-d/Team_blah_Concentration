@@ -1,3 +1,8 @@
+// Team Blah -- Shamaul Dilmohamed, Shanjeed Ali
+// APCS1 pd10
+// HW36 -- Some Folks Call it a Memory
+// 2015-11-24
+
 import cs1.Keyboard;  //if comfortable with Scanner, you may comment this out
 		
 public class Concentration {
@@ -118,10 +123,18 @@ public class Concentration {
 
 	System.out.println("Flipping tile...");
 	try {
-	    _board[r2][c2].flip();
+	    if (r1 == r2 && c1 == c2) {
+		System.out.println("No way you're flipping that over twice.");
+		_board[r1][c1].flip();
+		return;
+	    }
+	    else {
+		_board[r2][c2].flip();
+	    }
 	}
 	catch (Exception e) {
-	    System.out.println("Not a chance. Beginning of turn.");
+	    System.out.println("Error. Beginning of turn.");
+	    _board[r1][c1].flip();
 	    return;
 	}
 	System.out.println(printT(_board));
