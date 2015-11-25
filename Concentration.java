@@ -78,7 +78,7 @@ public class Concentration {
 	System.out.println(printT(_board));
 	System.out.println("What is the row (up and down) number, starting from zero, of the first tile you want to flip?"); //such concise instructions
 	try {
-	    r1 = Integer.parseInt(Keyboard.readString());
+	    r1 = Keyboard.readInt();
 	}
 	catch (Exception e) {
 	    System.out.println("Invalid input, returning to beginning of turn.");
@@ -86,7 +86,7 @@ public class Concentration {
 	}
         System.out.println("What is the column (left and right) number, starting from zero, that it is located in?");
 	try {
-	    c1 = Integer.parseInt(Keyboard.readString());
+	    c1 = Keyboard.readInt();
 	}
 	catch (Exception e) {
 	    System.out.println("Invalid input, returning to beginning of turn.");
@@ -110,7 +110,7 @@ public class Concentration {
 	System.out.println(printT(_board));
         System.out.println("What is the row (up and down) number, starting from zero, of the second tile you want to flip?");
 	try {
-	    r2 = Integer.parseInt(Keyboard.readString());
+	    r2 = Keyboard.readInt();
 	}
 	catch (Exception e) {
 	    System.out.println("Invalid input, returning to beginning of turn.");
@@ -119,7 +119,7 @@ public class Concentration {
 	}
         System.out.println("What is the column (left and right) number, starting from zero, that it is located in?");
 	try {
-	    c2 = Integer.parseInt(Keyboard.readString());
+	    c2 = Keyboard.readInt();
 	}
 	catch (Exception e) {
 	    System.out.println("Invalid input, returning to beginning of turn.");
